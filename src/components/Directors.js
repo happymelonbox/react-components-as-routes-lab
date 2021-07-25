@@ -7,12 +7,12 @@ const Directors = () => {
       <h1>Directors Page</h1>
         {directors.map(director=>{
           return(
-            <div>
+            <div key={director.name}>
               {director.name}
               <ul>
                 {director.movies.map(movie=>{
                   return(
-                    <li>{movie}</li>
+                    <li key={movie}>{movie}</li>
                   )
                 })}
               </ul>
